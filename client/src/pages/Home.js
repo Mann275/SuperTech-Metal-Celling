@@ -3,7 +3,7 @@ import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaLeaf, FaTools, FaRecycle, FaUserTie, FaBuilding } from 'react-icons/fa';
-import { featuredProjects } from '../data/mockProjects';
+import { featuredProjects as mockProjects } from '../data/mockProjects';
 
 // Import images
 import aboutImage from '../assets/images/home/about-image.jpg';
@@ -25,7 +25,7 @@ const Home = () => {
   useEffect(() => {
     // Simulate API call with mock data
     const timeoutId = setTimeout(() => {
-      setFeaturedProjects(featuredProjects);
+      setFeaturedProjects(mockProjects);
       setLoading(false);
       setError(null);
     }, 1000);
