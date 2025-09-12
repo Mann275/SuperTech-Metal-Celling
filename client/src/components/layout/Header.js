@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import { FaEnvelope, FaPhone } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import '../styles/Header.css';
+import '../../styles/Header.css';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
