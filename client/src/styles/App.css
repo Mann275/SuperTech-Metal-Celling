@@ -1,0 +1,306 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Variables (using CSS Custom Properties) */
+:root {
+  --primary: #0a3d62;
+  --secondary: #718093;
+  --dark: #2f3640;
+  --light: #f5f6fa;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --header-bg: rgba(255, 255, 255, 0.98);
+  --nav-link-color: #333;
+  --footer-bg: #1a1a1a;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Main content padding for fixed header */
+.main-content {
+  padding-top: 120px; /* Increased to account for navbar + top bar */
+}
+
+/* Page header section */
+.page-header {
+  position: relative;
+  height: 300px;
+  background: linear-gradient(rgba(10, 61, 98, 0.8), rgba(10, 61, 98, 0.8));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--page-bg-image);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+/* Header Styles */
+.top-bar {
+  font-size: 0.9rem;
+  background-color: var(--dark);
+  color: white;
+  padding: 8px 0;
+}
+
+.top-bar a {
+  text-decoration: none;
+  color: white;
+  transition: opacity 0.3s;
+}
+
+.top-bar a:hover {
+  opacity: 0.8;
+}
+
+/* Navbar Styles */
+.navbar {
+  transition: all 0.3s ease;
+  z-index: 1030;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .brand-text {
+  transition: all 0.3s ease;
+}
+
+.navbar .brand-text h1 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.navbar .brand-text p {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.navbar.scrolled {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: white !important;
+}
+
+.navbar.bg-transparent {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.navbar.bg-transparent .navbar-brand img {
+  filter: brightness(0) invert(1);
+}
+
+.navbar.bg-transparent .nav-link {
+  color: white !important;
+}
+
+.navbar.bg-transparent .nav-link:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: var(--primary) !important;
+}
+
+.navbar .nav-link.active {
+  color: var(--primary) !important;
+  font-weight: 600;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  margin-top: 40px;
+}
+
+.hero-image {
+  position: relative;
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.hero-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.hero-cta {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  background-color: #0d4b76;
+}
+
+/* Product Cards */
+.product-card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.product-image-container {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/2;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.1);
+}
+
+.product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 61, 98, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover .product-overlay {
+  opacity: 1;
+}
+
+.product-title {
+  color: var(--primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.product-description {
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .navbar .brand-text h1 {
+    font-size: 1.2rem;
+  }
+  
+  .navbar .brand-text p {
+    font-size: 0.7rem;
+  }
+}
