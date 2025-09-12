@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Button, Card, Carousel } from 'react-bootstrap';
+import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaLeaf, FaTools, FaRecycle, FaUserTie, FaBuilding } from 'react-icons/fa';
@@ -20,20 +20,32 @@ import TestimonialSlider from '../components/home/TestimonialSlider';
 const Home = () => {
   const [featuredProjects, setFeaturedProjects] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
+    let isMounted = true;
     const fetchFeaturedProjects = async () => {
       try {
         const res = await axios.get('/api/projects/featured');
-        setFeaturedProjects(res.data.slice(0, 3));
-        setLoading(false);
+        if (isMounted) {
+          setFeaturedProjects(res.data.slice(0, 3));
+          setLoading(false);
+          setError(null);
+        }
       } catch (error) {
         console.error('Error fetching featured projects:', error);
-        setLoading(false);
+        if (isMounted) {
+          setLoading(false);
+          setError('Failed to load featured projects. Please try again later.');
+        }
       }
     };
 
     fetchFeaturedProjects();
+    
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   // Animation variants
@@ -189,7 +201,17 @@ const Home = () => {
           
           <Row>
             {loading ? (
-              <div className="text-center py-5">Loading projects...</div>
+              <Col xs={12} className="text-center py-5">
+                <div className="spinner-border text-primary" role="status">
+                  <span className="visually-hidden">Loading projects...</span>
+                </div>
+              </Col>
+            ) : error ? (
+              <Col xs={12} className="text-center py-5">
+                <div className="alert alert-danger" role="alert">
+                  {error}
+                </div>
+              </Col>
             ) : featuredProjects.length > 0 ? (
               featuredProjects.map((project, index) => (
                 <Col lg={4} md={6} className="mb-4" key={project._id || index}>

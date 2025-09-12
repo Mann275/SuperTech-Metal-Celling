@@ -34,7 +34,7 @@ const Blog = () => {
 
   useEffect(() => {
     // In a real app, this would be an API call
-    setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       const mockPosts = [
         {
           id: '1',
@@ -118,6 +118,10 @@ const Blog = () => {
       setRecentPosts(mockPosts.slice(0, 3));
       setLoading(false);
     }, 1000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   // Filter posts by category

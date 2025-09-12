@@ -63,7 +63,7 @@ const Header = () => {
             />
           </Navbar.Brand>
           
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" aria-label="Toggle navigation" />
           
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">

@@ -20,7 +20,6 @@ import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 
 // Styles
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/App.css';
 
 function App() {
