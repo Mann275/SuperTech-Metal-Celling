@@ -3,7 +3,7 @@ import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaLeaf, FaTools, FaRecycle, FaUserTie, FaBuilding } from 'react-icons/fa';
-import axios from 'axios';
+import { featuredProjects } from '../data/mockProjects';
 
 // Import images
 import aboutImage from '../assets/images/home/about-image.jpg';
@@ -23,28 +23,15 @@ const Home = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    let isMounted = true;
-    const fetchFeaturedProjects = async () => {
-      try {
-        const res = await axios.get('/api/projects/featured');
-        if (isMounted) {
-          setFeaturedProjects(res.data.slice(0, 3));
-          setLoading(false);
-          setError(null);
-        }
-      } catch (error) {
-        console.error('Error fetching featured projects:', error);
-        if (isMounted) {
-          setLoading(false);
-          setError('Failed to load featured projects. Please try again later.');
-        }
-      }
-    };
-
-    fetchFeaturedProjects();
+    // Simulate API call with mock data
+    const timeoutId = setTimeout(() => {
+      setFeaturedProjects(featuredProjects);
+      setLoading(false);
+      setError(null);
+    }, 1000);
     
     return () => {
-      isMounted = false;
+      clearTimeout(timeoutId);
     };
   }, []);
 
