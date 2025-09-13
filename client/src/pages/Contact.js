@@ -91,6 +91,7 @@ const Contact = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           minHeight: '400px',
+          marginTop: '63px',
           display: 'flex',
           alignItems: 'center',
           color: 'white'
@@ -146,8 +147,8 @@ const Contact = () => {
       {/* Contact Form & Map Section */}
       <section className="contact-form-section py-5 bg-light">
         <Container>
-          <Row>
-            <Col lg={6} className="mb-4 mb-lg-0">
+          <Row className="g-4">
+            <Col lg={6}>
               <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -256,18 +257,30 @@ const Contact = () => {
                 viewport={{ once: true }}
                 variants={fadeInUp}
               >
-                <div className="contact-map-wrapper h-100">
-                  <div className="map-container rounded shadow overflow-hidden" style={{ height: "100%", minHeight: "400px" }}>
-                    {/* Replace with actual Google Maps embed code */}
+                <div className="contact-map-wrapper bg-white p-4 p-md-5 rounded shadow">
+                  <h3 className="mb-4">Our Location</h3>
+                  <div className="map-container rounded overflow-hidden" style={{ height: "400px" }}>
+                    {/* Updated Google Maps embed with marker and controls */}
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.2270164355385!2d72.84332087499733!3d19.148371982062037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7c8399fd2e1%3A0x3a6b9c86c3e19f25!2sShree%20Krishna%20Commercial%20Center%2C%20SV%20Rd%2C%20Goregaon%20West%2C%20Mumbai%2C%20Maharashtra%20400104!5e0!3m2!1sen!2sin!4v1694599234359!5m2!1sen!2sin"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.2270164355385!2d72.84332087499733!3d19.148371982062037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7c8399fd2e1%3A0x3a6b9c86c3e19f25!2sShree%20Krishna%20Commercial%20Center%2C%20SV%20Rd%2C%20Goregaon%20West%2C%20Mumbai%2C%20Maharashtra%20400104!5e0!3m2!1sen!2sin!4v1694599234359!5m2!1sen!2sin&markers=color:red%7C19.148371982062037,72.84332087499733&zoom=16"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
-                      allowFullScreen=""
+                      allowFullScreen={true}
                       loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
                       title="SUPERTECH Metal Ceilings Location"
                     ></iframe>
+                  </div>
+                  <div className="text-end mt-2">
+                    <a 
+                      href="https://maps.app.goo.gl/rHfEqGvhGGyVp2GK6" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="btn btn-sm btn-outline-primary"
+                    >
+                      Open in Google Maps
+                    </a>
                   </div>
                 </div>
               </motion.div>

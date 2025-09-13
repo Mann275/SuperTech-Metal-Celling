@@ -3,49 +3,41 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import PageHeader from '../components/common/PageHeader';
 
-// Import product images
-import metalCeilings from '../assets/images/products/Metal Ceilings.jpg';
-import exteriorLouvers from '../assets/images/products/Exterior Louvers.jpg';
-import exteriorCladding from '../assets/images/products/Exterior Cladding.jpg';
-import tGridSystems from '../assets/images/products/T Grid Systems.jpg';
-import raisedFloorSystems from '../assets/images/products/Raised Floor Systems.jpg';
-import fasttrakCubicle from '../assets/images/products/Fasttrak Cubicle Systems.jpg';
-
 const PRODUCTS = [
   {
     id: 1,
     name: 'Metal Ceilings',
-    image: metalCeilings,
+    image: 'https://placehold.co/800x600/e9ecef/495057?text=Metal+Ceilings',
     description: 'State-of-the-art metal ceiling solutions featuring clip-in, lay-in, and linear systems.'
   },
   {
     id: 2,
     name: 'Exterior Louvers',
-    image: exteriorLouvers,
+    image: 'https://placehold.co/800x600/e9ecef/495057?text=Exterior+Louvers',
     description: 'Premium architectural louvers engineered for both aesthetics and performance.'
   },
   {
     id: 3,
     name: 'Exterior Cladding',
-    image: exteriorCladding,
+    image: 'https://placehold.co/800x600/e9ecef/495057?text=Exterior+Cladding',
     description: 'High-performance ACP (Aluminum Composite Panel) cladding solutions with diverse finishes.'
   },
   {
     id: 4,
     name: 'T Grid Systems',
-    image: tGridSystems,
+    image: 'https://placehold.co/800x600/e9ecef/495057?text=T+Grid+Systems',
     description: 'Professional-grade T-Grid ceiling suspension systems manufactured from hot-dipped galvanized steel.'
   },
   {
     id: 5,
     name: 'Raised Floor Systems',
-    image: raisedFloorSystems,
+    image: 'https://placehold.co/800x600/e9ecef/495057?text=Raised+Floor+Systems',
     description: 'Advanced raised floor solutions for modern office spaces with flexible cable management.'
   },
   {
     id: 6,
     name: 'Fasttrak Cubicle Systems',
-    image: fasttrakCubicle,
+    image: 'https://placehold.co/800x600/e9ecef/495057?text=Fasttrak+Cubicle+Systems',
     description: 'Advanced toilet cubicle systems built with premium compact laminates and stainless steel hardware.'
   }
 ];
@@ -62,6 +54,7 @@ const Products = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           minHeight: '400px',
+          marginTop: '63px',
           display: 'flex',
           alignItems: 'center',
           color: 'white'
@@ -94,12 +87,12 @@ const Products = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: product.id * 0.1 }}
               >
-                <Card className="h-100 shadow-sm">
+                <Card className="product-card border-0 shadow-sm h-100">
                   <Card.Img
                     variant="top"
                     src={product.image}
                     alt={product.name}
-                    style={{ height: '250px', objectFit: 'cover' }}
+                    style={{ height: '300px', width: '100%', objectFit: 'cover' }}
                   />
                   <Card.Body>
                     <Card.Title className="h4 mb-3">{product.name}</Card.Title>

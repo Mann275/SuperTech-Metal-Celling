@@ -16,7 +16,7 @@ const HeroBanner = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           height: 'calc(100vh - 32px)',
-          marginTop: '32px',
+          marginTop: '63px',
           padding: 0,
           display: 'flex',
           alignItems: 'center',

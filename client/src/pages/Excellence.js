@@ -40,6 +40,7 @@ const Excellence = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           minHeight: '400px',
+          marginTop: '63px',
           display: 'flex',
           alignItems: 'center',
           color: 'white'
