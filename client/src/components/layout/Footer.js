@@ -6,10 +6,9 @@ import {
   FaEnvelope, 
   FaPhone, 
   FaFacebook, 
-  FaTwitter, 
-  FaLinkedin, 
+  FaTwitter,
   FaInstagram,
-  FaYoutube
+  FaUser
 } from 'react-icons/fa';
 import logo from '../../assets/STlogo.png';
 
@@ -24,9 +23,8 @@ const Footer = () => {
             <img 
               src={logo} 
               alt="SUPERTECH Metal Ceilings" 
-              height="60" 
               className="mb-4" 
-              style={{ filter: 'brightness(0) invert(1)' }} 
+              style={{ height: '60px', width: 'auto' }}
             />
             <p>SUPERTECH Metal Ceilings specializes in architectural metalwork, ceilings, louvers, cladding, cubicles, and flooring systems, backed by 25 years of expertise.</p>
             <div className="d-flex social-links mt-4">
@@ -36,14 +34,8 @@ const Footer = () => {
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="me-3">
                 <FaTwitter size={24} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="me-3">
-                <FaLinkedin size={24} />
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="me-3">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                 <FaInstagram size={24} />
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-                <FaYoutube size={24} />
               </a>
             </div>
           </Col>
@@ -107,16 +99,21 @@ const Footer = () => {
             <ul className="list-unstyled contact-info">
               <li className="mb-3 d-flex">
                 <FaMapMarkerAlt size={20} className="me-2 mt-1" />
-                <p className="m-0">Corporate Office, Gujarat, India</p>
+                <p className="m-0">202, Shree Krishna Commercial Center, 6, Udyog Nagar, Opp. Raheja Solitaire, S. V. Road, Goregaon (West), Mumbai, India - 400104.</p>
               </li>
               <li className="mb-3 d-flex">
                 <FaEnvelope size={20} className="me-2 mt-1" />
                 <a href="mailto:info@supertechmetal.in" className="text-white text-decoration-none">info@supertechmetal.in</a>
               </li>
-              <li className="d-flex">
+              <li className="mb-3 d-flex">
                 <FaPhone size={20} className="me-2 mt-1" />
-                <a href="tel:+91 9833670163" className="text-white text-decoration-none">+91  98336 70163</a>
+                <a href="tel:+919833670163" className="text-white text-decoration-none">Cell: +91 98336 70163</a>
               </li>
+              <li className="d-flex">
+                <FaUser size={20} className="me-2 mt-1" />
+                <p className="m-0">Viral Sheth</p>
+              </li>
+              
             </ul>
           </Col>
         </Row>

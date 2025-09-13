@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Button, Carousel } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -7,7 +7,7 @@ const HeroBanner = () => {
   // Background overlay is now handled by inline styles
 
   return (
-    <section className="hero-section">
+    <section className="hero-section" style={{ marginBottom: 0, paddingBottom: 0 }}>
       <div 
         className="hero-image position-relative" 
         style={{
@@ -15,8 +15,9 @@ const HeroBanner = () => {
           backgroundImage: `url(${require('../../assets/images/hero/hero-manufacturing.jpg')})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          height: '92vh',
-          marginTop: '-40px',
+          height: 'calc(100vh - 32px)',
+          marginTop: '32px',
+          padding: 0,
           display: 'flex',
           alignItems: 'center',
           color: 'white'

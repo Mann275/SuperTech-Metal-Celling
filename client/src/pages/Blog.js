@@ -41,7 +41,6 @@ const Blog = () => {
           title: 'Acoustic Solutions for Modern Office Spaces',
           excerpt: 'Discover how metal ceiling systems can provide superior acoustic performance while maintaining aesthetic appeal in contemporary office environments.',
           content: 'Full article content here...',
-          image: 'https://via.placeholder.com/800x500',
           date: '2024-06-15',
           author: 'Rajesh Kumar',
           authorPosition: 'Technical Director',
@@ -53,7 +52,6 @@ const Blog = () => {
           title: 'Sustainability in Metal Ceiling Manufacturing',
           excerpt: 'Learn about SUPERTECH\'s commitment to environmentally responsible manufacturing processes and how our products contribute to green building certifications.',
           content: 'Full article content here...',
-          image: 'https://via.placeholder.com/800x500',
           date: '2024-06-10',
           author: 'Priya Singh',
           authorPosition: 'Sustainability Manager',
@@ -65,48 +63,11 @@ const Blog = () => {
           title: 'Custom Ceiling Design Trends for 2024',
           excerpt: 'Explore the latest architectural trends in custom metal ceiling designs and how they\'re transforming interior spaces across various sectors.',
           content: 'Full article content here...',
-          image: 'https://via.placeholder.com/800x500',
           date: '2024-05-28',
           author: 'Amit Patel',
           authorPosition: 'Design Consultant',
           category: 'design',
           comments: 12
-        },
-        {
-          id: '4',
-          title: 'Fire Safety Standards for Metal Ceiling Systems',
-          excerpt: 'An overview of international fire safety standards for metal ceiling installations and how SUPERTECH ensures compliance across all products.',
-          content: 'Full article content here...',
-          image: 'https://via.placeholder.com/800x500',
-          date: '2024-05-15',
-          author: 'Sanjay Desai',
-          authorPosition: 'Compliance Officer',
-          category: 'technical',
-          comments: 3
-        },
-        {
-          id: '5',
-          title: 'Healthcare Facilities: Specialized Ceiling Solutions',
-          excerpt: 'How antimicrobial metal ceiling systems are revolutionizing healthcare facility design while meeting strict hygiene and maintenance requirements.',
-          content: 'Full article content here...',
-          image: 'https://via.placeholder.com/800x500',
-          date: '2024-04-30',
-          author: 'Dr. Ananya Shah',
-          authorPosition: 'Healthcare Solutions Advisor',
-          category: 'industry',
-          comments: 7
-        },
-        {
-          id: '6',
-          title: 'Installation Best Practices for Metal Ceiling Systems',
-          excerpt: 'A comprehensive guide to proper installation techniques for various metal ceiling types to ensure durability, safety, and optimal performance.',
-          content: 'Full article content here...',
-          image: 'https://via.placeholder.com/800x500',
-          date: '2024-04-22',
-          author: 'Vikram Mehta',
-          authorPosition: 'Installation Manager',
-          category: 'technical',
-          comments: 15
         }
       ];
 
@@ -234,16 +195,7 @@ const Blog = () => {
                         >
                           <Card className="blog-card border-0 shadow-sm">
                             <Row className="g-0">
-                              <Col md={4}>
-                                <div className="blog-image-container">
-                                  <Card.Img 
-                                    src={post.image} 
-                                    alt={post.title}
-                                    className="h-100 object-fit-cover"
-                                  />
-                                </div>
-                              </Col>
-                              <Col md={8}>
+                              <Col md={12}>
                                 <Card.Body className="p-4">
                                   <div className="blog-meta mb-2">
                                     <span className="text-primary text-capitalize">{post.category}</span>
@@ -352,17 +304,7 @@ const Blog = () => {
                     <Card.Body className="p-4">
                       <h4 className="widget-title mb-4">Recent Posts</h4>
                       {recentPosts.map((post) => (
-                        <div key={post.id} className="recent-post d-flex mb-3">
-                          <div className="recent-post-image me-3">
-                            <img 
-                              src={post.image} 
-                              alt={post.title}
-                              className="img-fluid rounded"
-                              width="80"
-                              height="60"
-                              style={{ objectFit: 'cover' }}
-                            />
-                          </div>
+                        <div key={post.id} className="recent-post mb-3">
                           <div className="recent-post-info">
                             <h6 className="mb-1">
                               <Link 

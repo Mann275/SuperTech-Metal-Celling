@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <header>
       {/* Top Info Bar */}
-      <div className="top-bar bg-dark text-white py-2" style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1031 }}>
+      <div className="top-bar bg-dark text-white py-1" style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1031 }}>
         <Container className="d-flex justify-content-between align-items-center">
           <div className="contact-info">
             <a href="mailto:info@supertechmetal.in" className="text-white me-4">
@@ -38,7 +38,7 @@ const Header = () => {
             </a>
           </div>
           <div className="location-info text-white">
-            <small>Corporate Office: Gujarat, India</small>
+            <small>Corporate Office: Mumbai, India</small>
           </div>
         </Container>
       </div>
@@ -48,18 +48,24 @@ const Header = () => {
         expand="lg" 
         fixed="top"
         variant={isScrolled ? 'light' : 'dark'}
-        className={`py-2 ${isScrolled ? 'scrolled' : ''}`}
-        style={{ top: '40px' }}
+        className={`${isScrolled ? 'scrolled' : ''}`}
+        style={{ 
+          top: '32px',
+          backgroundColor: 'transparent',
+          transition: 'all 0.3s ease',
+          zIndex: 1032,
+          padding: 0
+        }}
       >
         <Container>
           <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
             <img 
               src={logo}
               alt="SUPERTECH Logo" 
-              height="60"
+              height="50"
               className="d-inline-block me-2" 
               style={{
-                filter: isScrolled ? 'none' : 'brightness(0) invert(1)'
+                filter: isScrolled ? 'none' : 'none'
               }}
             />
           </Navbar.Brand>

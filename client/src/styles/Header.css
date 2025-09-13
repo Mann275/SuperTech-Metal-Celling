@@ -1,24 +1,29 @@
 .navbar {
   transition: all 0.3s ease;
-  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
 }
 
 .navbar.scrolled {
-  background-color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.98) !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .navbar:not(.scrolled) {
-  background-color: transparent !important;
+  background: rgba(0, 0, 0, 0.75) !important;
 }
 
 .navbar-nav .nav-link {
   color: #ffffff !important;
   font-weight: 500;
-  padding: 0.5rem 1rem !important;
-  margin: 0 0.2rem;
+  padding: 0.75rem 1rem !important;
   transition: all 0.3s ease;
-  border-radius: 4px;
 }
 
 .navbar.scrolled .navbar-nav .nav-link {
@@ -28,19 +33,11 @@
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
   color: #0d6efd !important;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.navbar.scrolled .navbar-nav .nav-link:hover,
-.navbar.scrolled .navbar-nav .nav-link.active {
-  color: #0d6efd !important;
-  background-color: rgba(13, 110, 253, 0.1);
 }
 
 .navbar:not(.scrolled) .navbar-nav .nav-link:hover,
 .navbar:not(.scrolled) .navbar-nav .nav-link.active {
   color: #ffffff !important;
-  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .navbar-toggler {
@@ -48,16 +45,9 @@
   padding: 0.5rem;
 }
 
-.navbar-toggler:focus {
-  box-shadow: none;
-  outline: none;
-}
-
 .top-bar {
   background-color: #1a1a1a !important;
-}
-
-.top-bar a:hover {
-  color: #0d6efd !important;
-  text-decoration: none;
+  position: fixed;
+  width: 100%;
+  z-index: 1001;
 }

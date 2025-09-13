@@ -59,7 +59,7 @@ const Home = () => {
               >
                 <h2 className="section-title">Driven by Innovation, <span className="text-primary">Built on Excellence</span></h2>
                 <p className="lead">SUPERTECH Metal Ceilings specializes in architectural metalwork that transforms spaces with precision engineering and aesthetic appeal.</p>
-                <p>With over 25 years of expertise, our state-of-the-art manufacturing facilities in Gujarat, India produce high-quality metal ceilings, louvers, cladding, and more using premium aluminium alloys and galvanized steel.</p>
+                <p>With over 25 years of expertise, our state-of-the-art manufacturing facilities in Mumbai, India produce high-quality metal ceilings, louvers, cladding, and more using premium aluminium alloys and galvanized steel.</p>
                 <p>Our commitment to innovation, sustainability, and customer satisfaction has made us a trusted name in the industry, serving 25,000+ clients across 100,000+ projects.</p>
                 <Button as={Link} to="/about" variant="primary" size="lg" className="mt-3">Discover Our Story</Button>
               </motion.div>

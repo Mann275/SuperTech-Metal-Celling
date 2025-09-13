@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SEO from './components/common/SEO';
+import ScrollToTop from './components/common/ScrollToTop';
 
 // Layout Components
 import Header from './components/layout/Header';
@@ -25,6 +26,7 @@ import './styles/App.css';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <SEO />
       <Header />
       <main className="main-content">

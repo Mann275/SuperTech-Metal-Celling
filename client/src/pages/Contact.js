@@ -61,7 +61,7 @@ const Contact = () => {
     {
       icon: <FaMapMarkerAlt className="contact-icon" />,
       title: "Our Location",
-      content: "Corporate Office, Gujarat, India"
+      content: "202, Shree Krishna Commercial Center, 6, Udyog Nagar, Opp. Raheja Solitaire, S. V. Road, Goregaon (West), Mumbai, India - 400104"
     },
     {
       icon: <FaPhoneAlt className="contact-icon" />,
@@ -260,7 +260,7 @@ const Contact = () => {
                   <div className="map-container rounded shadow overflow-hidden" style={{ height: "100%", minHeight: "400px" }}>
                     {/* Replace with actual Google Maps embed code */}
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.1195335443!2d72.55400021476878!3d23.13059018489566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9cef2cb0b261%3A0x47a8da8cac96220!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1631808822996!5m2!1sen!2sin"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.2270164355385!2d72.84332087499733!3d19.148371982062037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7c8399fd2e1%3A0x3a6b9c86c3e19f25!2sShree%20Krishna%20Commercial%20Center%2C%20SV%20Rd%2C%20Goregaon%20West%2C%20Mumbai%2C%20Maharashtra%20400104!5e0!3m2!1sen!2sin!4v1694599234359!5m2!1sen!2sin"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
