@@ -4,6 +4,7 @@ import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import { FaEnvelope, FaPhone } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import '../../styles/Header.css';
+import logo from '../../assets/STlogo.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,8 +33,8 @@ const Header = () => {
             <a href="mailto:info@supertechmetal.in" className="text-white me-4">
               <FaEnvelope className="me-1" /> info@supertechmetal.in
             </a>
-            <a href="tel:+919999999999" className="text-white">
-              <FaPhone className="me-1" /> +91 99999 99999
+            <a href="tel:+91 9833670163" className="text-white">
+              <FaPhone className="me-1" /> +91  98336 70163
             </a>
           </div>
           <div className="location-info text-white">
@@ -45,16 +46,15 @@ const Header = () => {
       {/* Main Navigation */}
       <Navbar 
         expand="lg" 
-        bg={isScrolled ? 'white' : 'transparent'} 
-        variant={isScrolled ? 'light' : 'dark'}
         fixed="top"
-        className={`py-2 transition-all ${isScrolled ? 'scrolled shadow-sm' : 'bg-transparent'}`}
+        variant={isScrolled ? 'light' : 'dark'}
+        className={`py-2 ${isScrolled ? 'scrolled' : ''}`}
         style={{ top: '40px' }}
       >
         <Container>
           <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
             <img 
-              src="https://img.logoipsum.com/288.svg"
+              src={logo}
               alt="SUPERTECH Logo" 
               height="60"
               className="d-inline-block me-2" 

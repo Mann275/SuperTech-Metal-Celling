@@ -66,7 +66,7 @@ const Contact = () => {
     {
       icon: <FaPhoneAlt className="contact-icon" />,
       title: "Call Us",
-      content: "+91 99999 99999"
+      content: "+91  98336 70163"
     },
     {
       icon: <FaEnvelope className="contact-icon" />,
@@ -290,7 +290,7 @@ const Contact = () => {
             <h2 className="mb-3">Let's Create Something Extraordinary Together</h2>
             <p className="lead mb-4">Partner with SUPERTECH for innovative architectural metalwork solutions.</p>
             <div className="d-flex justify-content-center">
-              <a href="tel:+919999999999" className="btn btn-light btn-lg me-3">
+              <a href="tel:+91 9833670163" className="btn btn-light btn-lg me-3">
                 <FaPhoneAlt className="me-2" /> Call Us
               </a>
               <a href="mailto:info@supertechmetal.in" className="btn btn-outline-light btn-lg">

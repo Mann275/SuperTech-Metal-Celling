@@ -11,7 +11,7 @@ import {
   FaInstagram,
   FaYoutube
 } from 'react-icons/fa';
-const logo = require('../../assets/logo-white.png');
+import logo from '../../assets/STlogo.png';
 
 const Footer = () => {
   return (
@@ -21,7 +21,13 @@ const Footer = () => {
         <Row>
           {/* Company Info */}
           <Col lg={4} md={6} className="mb-4 mb-lg-0">
-            <img src={logo} alt="SUPERTECH Metal Ceilings" height="60" className="mb-4" />
+            <img 
+              src={logo} 
+              alt="SUPERTECH Metal Ceilings" 
+              height="60" 
+              className="mb-4" 
+              style={{ filter: 'brightness(0) invert(1)' }} 
+            />
             <p>SUPERTECH Metal Ceilings specializes in architectural metalwork, ceilings, louvers, cladding, cubicles, and flooring systems, backed by 25 years of expertise.</p>
             <div className="d-flex social-links mt-4">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="me-3">
@@ -109,7 +115,7 @@ const Footer = () => {
               </li>
               <li className="d-flex">
                 <FaPhone size={20} className="me-2 mt-1" />
-                <a href="tel:+919999999999" className="text-white text-decoration-none">+91 99999 99999</a>
+                <a href="tel:+91 9833670163" className="text-white text-decoration-none">+91  98336 70163</a>
               </li>
             </ul>
           </Col>
