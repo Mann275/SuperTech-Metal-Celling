@@ -145,10 +145,10 @@ const Contact = () => {
       </section>
       
       {/* Contact Form & Map Section */}
-      <section className="contact-form-section py-5 bg-light">
+      <section className="contact-form-section py-4 py-md-5 bg-light">
         <Container>
           <Row className="g-4">
-            <Col lg={6}>
+            <Col lg={6} className="order-1 order-lg-0">
               <motion.div
                 initial="hidden"
                 whileInView="visible"

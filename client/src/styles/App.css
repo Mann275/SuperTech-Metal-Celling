@@ -329,19 +329,119 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  /* Typography */
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   
   .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  .lead {
+    font-size: 1rem;
   }
   
+  /* Navigation */
   .navbar .brand-text h1 {
     font-size: 1.2rem;
   }
   
   .navbar .brand-text p {
     font-size: 0.7rem;
+  }
+
+  .top-bar {
+    font-size: 0.8rem;
+  }
+
+  .navbar-toggler {
+    padding: 0.2rem 0.5rem;
+  }
+
+  /* Spacing */
+  .py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .my-5 {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* Contact Cards */
+  .contact-card {
+    margin-bottom: 1rem;
+  }
+
+  .contact-icon-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Forms */
+  .form-control {
+    font-size: 0.9rem;
+  }
+
+  .btn-lg {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  /* Product Cards */
+  .product-card {
+    margin-bottom: 1rem;
+  }
+
+  .product-card:hover {
+    transform: none;
+  }
+
+  /* Map */
+  .map-container {
+    height: 300px !important;
+  }
+
+  /* Hero Sections */
+  .hero-section {
+    min-height: 300px !important;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .card {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    border-radius: 0;
+  }
+
+  .contact-info-section .col-md-6 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .top-bar {
+    padding: 0.5rem 0;
+  }
+
+  .top-bar .contact-info a {
+    display: block;
+    margin-bottom: 0.25rem;
   }
 }

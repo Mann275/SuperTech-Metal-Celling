@@ -78,10 +78,10 @@ const Products = () => {
         </Container>
       </div>
       
-      <Container className="py-5">
+      <Container className="py-4 py-md-5">
         <Row className="g-4">
           {PRODUCTS.map((product) => (
-            <Col key={product.id} md={6}>
+            <Col key={product.id} sm={12} md={6}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

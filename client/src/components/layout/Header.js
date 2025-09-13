@@ -27,18 +27,25 @@ const Header = () => {
   return (
     <header>
       {/* Top Info Bar */}
-      <div className="top-bar bg-dark text-white py-1" style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1031 }}>
-        <Container className="d-flex justify-content-between align-items-center">
-          <div className="contact-info">
-            <a href="mailto:info@supertechmetal.in" className="text-white me-4">
-              <FaEnvelope className="me-1" /> info@supertechmetal.in
-            </a>
-            <a href="tel:+91 9833670163" className="text-white">
-              <FaPhone className="me-1" /> +91  98336 70163
-            </a>
-          </div>
-          <div className="location-info text-white">
-            <small>Corporate Office: Mumbai, India</small>
+      <div className="top-bar bg-dark text-white py-1">
+        <Container>
+          <div className="d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div className="contact-info d-flex align-items-center gap-3">
+              <a href="mailto:info@supertechmetal.in" className="text-white text-decoration-none">
+                <FaEnvelope className="me-1" />
+                <span className="d-none d-sm-inline">info@supertechmetal.in</span>
+                <span className="d-inline d-sm-none">Email</span>
+              </a>
+              <span className="d-none d-sm-inline">|</span>
+              <a href="tel:+91 9833670163" className="text-white text-decoration-none">
+                <FaPhone className="me-1" />
+                <span className="d-none d-sm-inline">+91 98336 70163</span>
+                <span className="d-inline d-sm-none">Call</span>
+              </a>
+            </div>
+            <div className="location-info text-white text-center text-md-end">
+              <small>Corporate Office: Mumbai, India</small>
+            </div>
           </div>
         </Container>
       </div>
